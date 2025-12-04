@@ -23,7 +23,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
     
     - name: Construir imagen
-      run: docker build . --file Dockerfile --tag springboot-crud-app:latest rluqmon168/springboot-crud-app:latest
+      run: |
+        docker compose build 
+        docker tag springboot-crud-app:latest rluqmon168/springboot-crud-app:latest
 
     - name: Subir imagen a DockerHub
       run: docker push rluqmon168/springboot-crud-app:latest
