@@ -23,6 +23,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
     
     - name: Construir imagen
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag :$(date +%s)
 
     
