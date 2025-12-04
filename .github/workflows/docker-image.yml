@@ -30,5 +30,3 @@ jobs:
     - name: Subir imagen a DockerHub
       run: docker push rluqmon168/springboot-crud-app:latest
     
-
-    
